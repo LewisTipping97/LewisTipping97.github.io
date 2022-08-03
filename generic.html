@@ -16,11 +16,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
+				<a href="index.html" class="title">Lewis Tipping</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
+						<li><a href="generic.html" class="active">Professional experience</a></li>
 						<li><a href="elements.html">Elements</a></li>
 					</ul>
 				</nav>
@@ -32,10 +32,44 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1 class="major">Professional experience</h1>
+							<span class="image fit"><img src="images/fig_1 copy.pdf" alt="" /><figcaption>Figure above: My professional experience displayed as a wordcloud using the text from this page.</figcaption></span>
+			<p>This page goes into a bit more detail regarding my previous work. The page is made up of three sections, my current work, my past experience and my education.</p>
+	    <h2>My current role - Junior Data Scientist @ MPS</h2>
+							<p>In September 2021, I started as a Junior Data Scientist for the Medical Protection Society (MPS). MPS is a not for profit who indemnify dentists and doctors across the world. Medical indemnity is similar to insurance, and the company is in the process of becoming an insurance company, meaning it will lose its not for profit status.</p>
+							<p>There are five members of the data science team and we sit amongst the product and pricing department. We primarily interact with the underwriting team and member experience team. Below are some of the workloads I take on on a daily basis.</p>
+			<h4>CHURN Models</h4>
+			<p>I am responsible for the UK Dental market and Consultant market CHURN models. The company operates on annual account memberships, I use boosted decision trees to predict whether a member will leave or not during their account. I have added value to these models by incorporating Survival Analyis into this problem, we can now predict the likelihood that someone leaves in 1,3 or 5 years, rather than only during the account as it was before. These models are built in Python using VS code, the data is collected using SQL within Azure data studio.</p>
+			<h4>Claims analysis models</h4>
+			<p>I have assisted on multiple models which look at the likelihood of a member having a claim made against them and how much this claim will cost MPS. This is a highly imbalanced problem as claim frequency is 2% on average. I added value to this project by suggesting hurdle models, which answer this style of question perfectly.</p>
+			<h4>Presentations</h4>
+			<p>During my first year at the company, I have presented multiple times to executive members of the company. These presentations are to 10-60 people and are catered to the appropriate audience. One of my presentations, which looked at introducing survival analysis into churn models, won me an award which came with a monetary prize.</p>
+			<h4>Geospatial work</h4>
+			<p>Alot of our data is based on location, I work quite a lot with spatial data, whether this is ONS data which is included in our models, or simply creating powerful visualisations which can be shared around the business.</p>
+			<h4>Unstructured data</h4>
+			<p>There is a wealth of long form text data at MPS, I have been part of a team that is trying to extract value from these documents. Before I joined, the bulk of the work was done in Microsoft Access. Since then, it has switched to SQL and I have pushed for experiments to be done in Python. The most successful implementation of python was using a package called fuzzywuzzy to match documents in bulk through the Levenshtein distance metric.</p>
+      <h2>NHS Data Science Placement</h2>
+      <p>This project made up one third of my MSc and involved working collaboratively with the NHS to provide insight into weaknesses in the A&amp;E system. I was provided with the raw data set which gave me great exposure to what real life data was like. Previously, I had only worked with squeaky clean data provided by the university.</p>
+      
+      <h4>Data Visualisation</h4>
+      <p>One of the most important parts of this project was to provide a clear structure of the A&amp;E pathway. This involved producing flowcharts which showed the possible routes that a patient could take through the hospital. </p>
+      <h4>Data Cleansing</h4>
+      <p>As mentioned, the data were not cleansed before it was passed on to me. The first issue was simple, and simply involved creating a target variable. This took two forms as there were two different approaches. The first response variable was a time to disposal (which was a rather inhumane term which referred to patients leaving A&amp; via discharge, transfer, death etc.), the second variable was a binary response which stated whether a patient was disposed of within 4 hours of arrival.</p>
+      <p>The second, and more troubling aspect of data cleansing came in the form of missing data. Only 57% of the data were complete cases, meaning no variable was missing. Predictive mean matching was used to impute data where it was missing, the data were checked thoroughly to make sure it was imputed appropriately. </p>
+      <h4>Methodology</h4>
+      <p>As mentioned, two similar, but different problems were tackled. The first and more common data science problem was that of the classifier, predicting whether a patient would or would not leave A&amp;E within four hours. Two classifiers were used here, XGboost and Logistic Regression. The focus on these models was not so much the model performance, although this was important, but more so the feature importance. This worked differently for both models, feature importance is a model output with XGboost whereas the coefficients were inspected from logistic regression.</p>
+      <p>The second method was Survival Analysis. This focused on the time to event which is a different branch of predictive modelling. It has one key difference to regression, the idea of censoring. Censoring was required for this problem which meant the task leant itself to this type of analysis. A Cox proportional hazards model was used and similarly to the classifiers, the effects of variables was more important than the model itself.</p>     
+      <h4>Knowledge sharing</h4>
+      <p>The final results from the model were presented during my dissertation viva and also more generally presented back to members of the NHS. The audience was varied in its data science understanding which required creativity on my part when presenting the work.</p>
+              <h2>Education</h2>
+							<p>In 2016, I undertook a BSc in Economics at Lancaster University. I graduated in 2019 and took a year out to save for a MSc. One year later, I began my MSc in Data Science back at Lancaster. I graduated in 2021 with a distinction, averaging 79% in my final grade. The masters course taught a range of topics and offered 3 pathways, I took the business intelligence pathway. Some of the key modules I studied are described below.</p>
+							<ol>
+							  <li> Statistical Learning - This module was the most important from a Data Science perspective. It was taught in my final term and it involved advanced statistical methods. The final project involved creating classifiers using XGBoost and regularized logistic regression which would take an image of a lung scan as the input, the models would then predict if this scan is covid positive or negative.</li>
+  <li>Statistical methods and modelling - This module supplied the framework for machine learning models, we studied regression in depth. The course was assessed through a group project where we had to create a regression model that predicted someones weight, given other factors</li>
+  <li>Intro to intelligent data analysis (data mining) - This was my first exposure to machine learning within Python. The module taught me about the CRISP-DM process from start to finish. There was a particular focus on data preparation, including Prinicpal Component Analysis (PCA). The final assessment involved clustering weather data (k-means, mean shift and hierarchical) and then classifying new data into one of these clusters (k-nearest neighbour and Bayes).</li>
+  <li>Programming for data scientists - This module was a personal favourite of mine, it gave me the opportunity to upgrade my Python and R skills. Every week I was set a programming challenge that inlcuded tasks like recursion, developing a decision tree which maximises entropy and list manipulation (pop etc.). </li>
+  <li>Forecasting - Another favourite module of mine, this focused on business forecasting in R. Two methods were focused on, (S)ARIMA and exponential smooting. I was tasked with forecasting withdrawals from cashpoints around the UK. </li>
+</ol>
 						</div>
 					</section>
 
